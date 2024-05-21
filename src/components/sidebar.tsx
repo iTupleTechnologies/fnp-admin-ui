@@ -8,6 +8,8 @@ import {
     Settings,
     Store,
     CreditCard,
+    List,
+    ClipboardList,
 } from "lucide-react";
 import { Label } from "./common/Label";
 
@@ -27,6 +29,8 @@ const navItems: NavItem[] = [
         link: "/orders",
     },
     { label: "Products", icon: Tag, link: "/products" },
+    { label: "Collections", icon: List, link: "/collections" },
+    { label: "Catalogs", icon: ClipboardList, link: "/catalogs" },
     { label: "Customers", icon: Users, link: "/customers" },
     { label: "Content", icon: FileText, link: "/content" },
     { label: "Analytics", icon: BarChart2, link: "/analytics" },
@@ -45,7 +49,7 @@ const Sidebar: React.FC = () => {
             href={item.link}
             className="flex items-center py-1 px-4 rounded transition duration-200 hover:bg-gray-100 cursor-pointer"
         >
-            <item.icon className="mr-3" />
+            <item.icon className="mr-3 w-5 h-5" />
             <Label className="cursor-pointer">{item.label}</Label>
             {item.notification && (
                 <Label
